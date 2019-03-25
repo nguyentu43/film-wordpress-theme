@@ -1,0 +1,267 @@
+/*!
+Theme Name: T-Film
+Theme URI: 
+Author: maruro
+Author URI: 
+Description: Theme cho website chia sẻ phim
+Version: 1.0.0
+Text Domain: t-film
+Tags: 
+
+*/
+
+.glyph-icon svg {
+	width:16px;
+	height:16px;
+}
+
+.title{
+	border-left: 5px solid orange;
+	padding-left: 5px;
+
+}
+
+.title-red{
+	border-color: #dc3545;
+}
+
+.title-blue{
+	border-color: #007bff;
+}
+
+.title-green{
+	border-color: #18893B;
+}
+
+.title-black{
+	border-color: black;
+}
+
+.title-yellow{
+	border-color: #ffc107;
+}
+
+.title-pink{
+	border-color: pink;
+}
+
+#navbar-film .nav-link{
+	white-space: nowrap;
+}
+
+#navbar-top .dropdown-item:hover{
+	color: black;
+}
+
+.form-control-plaintext{
+	color: white;
+}
+
+.film-item{
+	position: relative;
+}
+
+.film-v-list .film-title, .film-title > *, .film-quality, .film-history.fix, .float-content, .text-ellipsis{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.film-item .film-quality{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+}
+
+.film-item .film-history.fix{
+	position: absolute;
+	bottom: 110px;
+	left: 5px;
+	right: 5px;
+}
+
+.film-v-cover .film-title{
+	color: white;
+	position: absolute;
+	bottom: 30px;
+	background: rgba(1, 1, 1, 0.5);
+	left: 0px;
+	right: 0px;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.film-v-cover:hover .film-title{
+	opacity: 1;
+}
+
+.film-v-cover a{
+	color: white !important;
+}
+
+.film-v-cover .film-history.fix{
+	position: absolute;
+	bottom: 5px;
+}
+
+.post-title{
+	word-wrap: break-word;
+}
+
+.list-film-info{
+	font-size: 0.85rem;
+}
+
+.badge + .badge{
+	margin: 0.2rem 0.2rem 0 0.2rem;
+}
+
+.badge a{
+	color: white;
+	text-decoration: none;
+}
+
+.badge .oi{
+	color: white;
+}
+
+.comment-info{
+	font-size: 0.9rem;
+}
+
+#search-form{
+	position: relative;
+}
+
+#search-form #section-search-filter{
+	position: absolute;
+	top: 42px;
+	right: 0;
+	left: 0;
+	background: white;
+	z-index: 999;
+}
+
+.ui-widget{
+	font-size: 0.9rem;
+}
+
+legend{
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.list-group .list-group-item{
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.jqEmoji-container{
+	display: inline-block;
+}
+
+.film-poster{
+	position: relative;
+}
+
+.film-poster .badge-rating{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 0px;
+}
+
+.film-single #player{
+	height: 400px !important;
+}
+
+.film-single .film-header{
+	position: relative;
+}
+
+.film-single .float-poster{
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: white;
+}
+
+.film-single .float-content > div{
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.film-v-banner{
+	position: relative;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.film-v-banner .caption{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: white !important;
+}
+
+.slick-dotted.slick-slider{
+	margin-bottom: 0px
+}
+
+.slick-dots{
+	margin-bottom: 25px;
+}
+
+.slick-dots li button::before{
+	color: white !important;
+	content: '' !important;
+	height: 4px;
+	background: white;
+	top: 8px !important;
+}
+
+.scroll-x, .scroll-y, .scroll{
+	position: relative;
+}
+
+@media screen and (max-width: 992px)
+{
+
+	.film-single #player{
+		height: 300px !important;
+	}
+
+	.film-v-banner{
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+
+	.film-single #player{
+		height: 380px !important;
+	}
+}
+
+@media screen and (max-width: 576px)
+{
+
+	.film-single #player{
+		height: 280px !important;
+	}
+}
+
+@media screen and (max-width: 400px)
+{
+
+	.film-single #player{
+		height: 250px !important;
+	}
+}
+
