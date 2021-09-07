@@ -1,4 +1,4 @@
-# Simple Film Theme Wordpress
+# Film - Theme Wordpress
 
 ![Demo Img](https://github.com/nguyentu43/simplefilmtheme/raw/master/screenshot.png)
 
