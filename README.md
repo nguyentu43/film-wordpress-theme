@@ -1,8 +1,5 @@
 # Simple Film Theme Wordpress
 
-## How to Install
-Install theme file: t-film.zip
-
 ![Demo Img](https://github.com/nguyentu43/simplefilmtheme/raw/master/screenshot.png)
 
 ### Fix error "Unable to find the wrapper https - did you forget to enable it when you configured PHP?"
