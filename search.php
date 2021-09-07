@@ -2,7 +2,7 @@
 
 	<div class="col-md-8 col-12" id="main">
 
-		<div class="row my-4">
+		<div class="row my-2">
 			<div class="col-12 px-0 px-md-3">
 				<div class="p-3 mb-4 bg-film"><strong><?= __('Kết quả tìm kiếm bài viết chứa nội dung ', 't-film'). '<u>'.esc_html(get_query_var( 's', $default = '' )).'</u>' ?></strong>
 				</div>

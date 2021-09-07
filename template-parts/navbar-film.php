@@ -1,4 +1,4 @@
-<nav class="navbar col-12 navbar-dark text-center" id="navbar-film">
+<nav class="navbar col-12 navbar-dark text-center border-bottom" id="navbar-film">
   	<ul class="nav nav-pills flex-nowrap scroll-x">
 	  <?php
 

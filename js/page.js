@@ -54,15 +54,21 @@ jQuery().ready(function(e){
 	});
 
 	jQuery('.scroll-x').each(function(){
-		new PerfectScrollbar(this);
+		new PerfectScrollbar(this, {
+			wheelPropagation: true
+		});
 	});
 
 	jQuery('.scroll-y').each(function(){
-		new PerfectScrollbar(this);
+		new PerfectScrollbar(this, {
+			wheelPropagation: true
+		});
 	});
 
 	jQuery('.scroll').each(function(){
-		new PerfectScrollbar(this);
+		new PerfectScrollbar(this, {
+			wheelPropagation: true
+		});
 	});
 
 	var lastView = localStorage.getItem('t_film_player_history');

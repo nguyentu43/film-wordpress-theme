@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 	<div class="col-md-8 col-12" id="main">
-		<div class="row my-4">
+		<div class="row my-2">
 			<div class="col-12 px-0 px-md-3">
 				<div class="p-3 bg-film">
 					<strong>

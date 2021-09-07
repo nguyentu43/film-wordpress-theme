@@ -13,7 +13,9 @@
 	<header>
 		<nav class="navbar navbar-expand-lg justify-content-between" id="navbar-top">
 		  <a class="navbar-brand" href="<?php bloginfo('url')?>">
-		  	<img src="<?= get_site_icon_url() ?>" width="30" height="30" alt="icon t-film">
+				<?php if(get_site_icon_url()): ?>
+					<img src="<?= get_site_icon_url() ?>" width="30" height="30" alt="icon t-film">
+				<?php endif ?>
 		  	<?php bloginfo('name')?>
 		  </a>
 		  <?php get_template_part( 'template-parts/searchbar') ?>
@@ -34,15 +36,15 @@
 		  		$locations = get_nav_menu_locations();
 		  		$menu = get_term($locations['menu-top'], 'nav_menu');
 		  		$menu_items = wp_get_nav_menu_items($menu->term_id);
-		  		
-		  		foreach($menu_items as $item):
+					if(is_array($menu_items)):
+		  			foreach($menu_items as $item):
 		  	?>
 
 		  		<li class="nav-item">
 			        <a class="nav-link" href="<?= $item->url ?>"><?= $item->title ?></a>
 			    </li>
 
-		  	<?php endforeach;?>
+		  	<?php endforeach; endif;?>
 
 		      <?php if(is_user_logged_in()): ?>
 		      <li class="nav-item dropdown">

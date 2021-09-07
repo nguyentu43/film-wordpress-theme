@@ -59,12 +59,17 @@ Tags:
 
 .film-item{
 	position: relative;
+	height: 100%;
 }
 
 .film-v-list .film-title, .film-title > *, .film-quality, .film-history.fix, .float-content, .text-ellipsis{
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+}
+
+.film-v-list img{
+	height: 100%;
 }
 
 .film-item .film-quality{
@@ -84,7 +89,7 @@ Tags:
 .film-v-cover .film-title{
 	color: white;
 	position: absolute;
-	bottom: 30px;
+	bottom: 0px;
 	background: rgba(1, 1, 1, 0.5);
 	left: 0px;
 	right: 0px;
@@ -111,6 +116,10 @@ Tags:
 
 .list-film-info{
 	font-size: 0.85rem;
+}
+
+.list-film{
+	overflow: hidden;
 }
 
 .badge + .badge{

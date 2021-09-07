@@ -1,7 +1,7 @@
-<div id="film-<?php the_ID()?>" <?php post_class('film-item film-v-cover')?> title="<?=  mb_strtoupper(get_the_title())?>" >
-	<div class="film-poster">
+<div id="film-<?php the_ID()?>" <?php post_class('film-item film-v-cover')?> title="<?=  mb_strtoupper(get_the_title())?>">
+	<div class="film-poster" style="height: 100%">
 		<a href="<?php the_permalink() ?>">
-			<img src="<?= get_the_post_thumbnail_url() ?>" class="img-fluid poster" alt="poster <?= get_the_title()?>">
+			<img src="<?= get_the_post_thumbnail_url() ?>" class="img-fluid poster" alt="poster <?= get_the_title()?>" style="height: 100%">
 		</a>
 
 		<h6 class="badge-rating">

@@ -4,11 +4,22 @@ jQuery().ready(function(e){
 	var prevPageYOffset = window.pageYOffset;
 
 	jQuery(window).on('activate.bs.scrollspy', function () {
-		
-		var left = jQuery('#navbar-film .nav-link.active').position().left;
-		var offset = 15;
 
-		jQuery('#navbar-film .scroll-x')[0].scrollLeft = left - offset;
+		var left = 0;
+
+		jQuery('#navbar-film .nav-item').each(function(){
+
+			if(jQuery(this).find('a').hasClass('active'))
+			{
+				jQuery('#navbar-film .scroll-x')[0].scrollLeft = left;
+				return;
+			}
+			else
+			{
+				left += jQuery(this).width();
+			}
+
+		});
 
 	});
 

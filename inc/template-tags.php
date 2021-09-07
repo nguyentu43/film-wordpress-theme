@@ -353,11 +353,6 @@ if(!function_exists('t_film_jwplayer_link')){
 
 		echo $span;
 
-		/*echo '<pre>';
-		print_r($playlist);
-		echo '</pre>';
-		die;*/
-
 		t_film_packer_js(sprintf('jwplayer("player").load(%s);', json_encode($playlist)));
 	}
 }
@@ -511,7 +506,7 @@ if(!function_exists('t_film_box_cover'))
 					while($films->have_posts()):
 						$films->the_post();
 			?>
-				<div class="col-xl-2 col-md-3 col-sm-4 col-6">
+				<div class="col-xl-2 col-md-3 col-sm-4 col-5 pr-0">
 					<?php get_template_part( '/template-parts/content', 'film-cover'); ?>
 				</div>
 
@@ -531,13 +526,14 @@ if(!function_exists('t_film_box_cover'))
 
 if(!function_exists('t_film_box_list_x'))
 {
-	function t_film_box_list_x($args, $row = 3)
+	function t_film_box_list_x($args, $colCount = 6)
 	{
 ?>
-		<div class="row flex-nowrap scroll-x pb-1">
+		<div class="row scroll-x pb-1">
+			<div class="col-12">
 			<?php
 
-				$break = $row * 2;
+				$break = $colCount;
 				$films = new WP_Query($args);
 				$i = 1;
 				if($films->have_posts()):
@@ -545,24 +541,25 @@ if(!function_exists('t_film_box_list_x'))
 						$films->the_post();
 
 						if($i % $break == 1)
-							echo '<div class="col-12"><div class="row">';
+							echo '<div class="row flex-nowrap no-gutters mr-1">';
 			?>
-						<div class="col-sm-6 col-12 mb-2">
+						<div class="col-md-4 col-sm-6 col-7 mb-1">
 							<?php get_template_part( '/template-parts/content', 'film-list'); ?>
 						</div>
 
 			<?php
 						if($i % $break == 0)
-							echo '</div></div>';
+							echo '</div>';
 						$i++;
 					endwhile;
 					if(($i - 1) % $break != 0)
-						echo '</div></div>';	
+						echo '</div>';	
 					wp_reset_postdata();
 				else:
 					get_template_part( 'template-parts/content', 'none-film' );
 				endif;
 			?>
+			</div>
 		</div>
 
 <?php
